@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booleans: comparações</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+<body>
+    <h1>Booleans: Operadores Lógicos</h1>
+    <hr>
+    <ul>
+        <li>Por meio de uma comparação resultam em um Boolean</li>
+        <li>&& - and -> para ser true, os dois 'lados' da comparação precisam ser true</li>
+        <li>|| - or -> para ser true, basta um dos 'lados' da comparação ser true;</li>
+        <li>! - not -> inverter os valores (true vira false);</li>
+    </ul>
+    <!-- Criar tabela com operadores lógicos -->
+    <style>
+        th, tr{
+            text-align: center;
+            width: 10%;
+        }   
+    </style>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A AND B</th>
+            <th>A OR B</th>
+            <th>NOT A</th>
+            <th>NOT B</th>
+        </tr>
+        <tr>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+        </tr>
+    </table>
+    
+    <hr>
+    <h3>Exemplos:</h3>
+    <ul>
+        <li><pre><code>console.log(true && false);</code></pre></li>
+        <li><pre><code>console.log("1" != 1);</code></pre></li>
+        <li><pre><code>console.log("1" !== 1);</code></pre></li>
+        <li><pre><code>console.log("1" && 1);</code></pre></li>
+        <li><pre><code>console.log("1" || 1);</code></pre></li>
+        <li><pre><code>console.log(!1);</code></pre></li>
+        <li><pre><code>console.log(!true);</code></pre></li>
+        <li><pre><code>console.log(!false);</code></pre></li>
+        <li><pre><code>console.log(!(1 > 2));</code></pre></li>
+        <li><pre><code>console.log(!(1 < 2));</code></pre></li> 
+        <li><pre><code>console.log(!(1 >= 2));</code></pre></li>
+        <li><pre><code>console.log(!(1 <= 2));</code></pre></li>
+        <li><pre><code>console.log(!(1 && 2));</code></pre></li>
+        <li><pre><code>console.log(!(1 || 2));</code></pre></li>
+        <li><pre><code>console.log(!(true && false));</code></pre></li>
+        <li><pre><code>console.log(!(true || false));</code></pre></li>
+    </ul>
+    <hr>
+</body>
+</html>
