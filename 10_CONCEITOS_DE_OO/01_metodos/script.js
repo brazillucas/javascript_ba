@@ -1,15 +1,14 @@
-let array = {
-    nome: 'pedro',
-    idade: 20,
-    sexo: 'M',
-    peso: 2130,
-    altura: 2130,
-};
+let gato = {
+    nome: 'Felix',
+    idade: 3,
+    peso: 3,
+    miar: function() {
+        console.log('Miau!');
+    },
+    comer: function(comida) {
+        console.log(`${this.nome} está comendo ${comida}`);
+    }
+}
 
-// array.forEach(element => {
-//     console.log(element);
-// });
-
-Object.keys(array).forEach(element => {
-    console.log(`${element}: ${array[element]}`);
-});
+gato.miar();
+gato.comer('ração');
