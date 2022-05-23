@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+#tituloPrincipal {
+    color: rgb(255 255 255);
+    text-shadow: 1px 1px 7px rgb(185 15 15);
+    background-color: #327da1;
+    border: 5px solid rgb(16, 94, 131);
+    width: max-content;
+    padding: 10px;
+    margin: 10px;
+}
+
+#retangulo {
+    /*configurando altura, largura e cor */
+    height: '80px';
+    width: '200px';
+    background: 'red';
+
+    /*configurando display e alinhamento */
+    display: 'flex';
+    justify-content: 'center';
+    align-items: 'center';
+    flex-wrap: 'wrap';
+
+    /*Configurando margem e espaçamento */
+    padding: '20px 0';
+    margin: '25px';
+
+    /*borda com gradiente */
+    border: '5px solid transparent';
+    border-image: 'linear-gradient(to right, green, lightgreen) 1';
+    border-image-slice: '1';
+    border-radius: '12px';
+
+    /*Configurando textos dentro do retângulo */
+    color: 'white';
+    font-size: '20px';
+    text-align: 'center';
+    font-family: "'Roboto', sans-serif"; /*Usando aspas duplas pois seria necessário aspas simples para o nome da fonte */
+}
