@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto do Evento</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            background-color: rgb(157, 145, 163);
+        }
+        #btn, #btn2 {
+            border: 5px solid;
+            border-radius: 10px;
+            border-color: #d7263d;
+            width: max-content;
+            height: 50px;
+            font-size: 20px;
+            background-color: rgb(255, 209, 186);
+            margin: 20px;
+        }
+        #btn2 {
+            border-color: #4535c5;
+            background-color: rgb(255, 209, 186);
+        }
+    </style>
+</head>
+<body>
+    <div id="retangulo"></div>
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+        <button id="btn">Clique aqui</button>
+        <button id="btn2">Remover Evento</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
