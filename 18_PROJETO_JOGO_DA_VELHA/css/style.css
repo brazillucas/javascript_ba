@@ -8,14 +8,11 @@ h1 {
 }
 
 /* Botões */
-#buttons-container {
-    user-select: none;
-}
-
-#buttons-container button {
+button {
     border: none;
     padding: 10px 15px;
     margin: 0 10px;
+    user-select: none;
 }
 
 /* Jogo */

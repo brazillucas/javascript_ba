@@ -2,27 +2,23 @@
 let x = document.querySelector('.x');
 let o = document.querySelector('.o');
 let boxes = document.querySelectorAll('.box');
-
 let buttons = document.querySelectorAll('#buttons-container button');
-
+let reset = document.querySelector('#reset');
 let containerMensagem = document.querySelector('#mensagem');
-
 let mensagem = document.querySelector('#mensagem p');
-
 let segundoJogador;
 
 // Contador de Jogadas
-
 let jogador1 = 0;
 let jogador2 = 0;
 
 // Adicionando evendo de click aos boxes
 for (let i = 0; i < boxes.length; i++) {
 
-    //quando clicar na caixa
+    // quando clicar na caixa
     boxes[i].addEventListener('click', function () {
 
-        let el = verificaJogador();        
+        let el = verificaJogador();
 
         // Verifica se já está preenchida
         if (this.childNodes.length == 0) {
@@ -49,6 +45,25 @@ for (let i = 0; i < boxes.length; i++) {
     })
 }
 
+reset.addEventListener('click', function() {
+    jogador1 = 0;
+    jogador2 = 0;
+    
+    limparBoxes();
+    for (let j = 0; j < buttons.length; j++) {
+       buttons[j].classList.remove('hide');
+    }
+    
+    let resetPlacarX = document.querySelector('#placar1');
+    let resetPlacarO = document.querySelector('#placar2');
+
+    resetPlacarX.textContent = 0;
+    resetPlacarO.textContent = 0;
+
+    container.classList.add('hide');
+    reset.classList.add('hide');
+})
+
 function verificaJogador () {            
     if (jogador1 == jogador2) {
         // x
@@ -65,27 +80,28 @@ for (let i = 0; i < buttons.length; i++) {
         segundoJogador = this.getAttribute('id');
 
         for (let j = 0; j < buttons.length; j++) {
-            buttons[j].style.display = 'none';
+            buttons[j].classList.add('hide');
         }
 
         setTimeout(function() {
             let container = document.querySelector('#container');
             container.classList.remove('hide');
+            reset.classList.remove('hide');
         }, 300);
     })
 }
 
 // Checar vencedor
 function checarVencedor() {
-    let b1 = document.querySelector('#bloco-1');
-    let b2 = document.querySelector('#bloco-2');
-    let b3 = document.querySelector('#bloco-3');
-    let b4 = document.querySelector('#bloco-4');
-    let b5 = document.querySelector('#bloco-5');
-    let b6 = document.querySelector('#bloco-6');
-    let b7 = document.querySelector('#bloco-7');
-    let b8 = document.querySelector('#bloco-8');
-    let b9 = document.querySelector('#bloco-9');
+    let b1 = document.getElementById('bloco-1');
+    let b2 = document.getElementById('bloco-2');
+    let b3 = document.getElementById('bloco-3');
+    let b4 = document.getElementById('bloco-4');
+    let b5 = document.getElementById('bloco-5');
+    let b6 = document.getElementById('bloco-6');
+    let b7 = document.getElementById('bloco-7');
+    let b8 = document.getElementById('bloco-8');
+    let b9 = document.getElementById('bloco-9');
 
     // Checar se foi preenchido horizontalmente
     if (b1.childNodes.length > 0 && b2.childNodes.length > 0 && b3.childNodes.length > 0) {
@@ -193,9 +209,11 @@ function checarVencedor() {
             contador++;
         }
     }
+
     console.log(contador);
+
     if (contador == 9) {
-        declaraVencedor();
+        declaraVencedor('deu velha');
     }
 }
 
@@ -203,7 +221,6 @@ function declaraVencedor(vencedor) {
 
     let placarX = document.querySelector('#placar1');
     let placarO = document.querySelector('#placar2');
-
     let msg = '';
 
     if (vencedor == 'x') {
@@ -216,6 +233,7 @@ function declaraVencedor(vencedor) {
         msg = 'Deu velha!';
     }
 
+    // Exibe mensagem
     mensagem.innerHTML = msg;
     containerMensagem.classList.remove('hide');
 
@@ -229,13 +247,15 @@ function declaraVencedor(vencedor) {
     jogador2 = 0;
     
     // Limpa as boxes
+    limparBoxes(); 
+}
+
+function limparBoxes() {
     let boxesRemover = document.querySelectorAll('.box div');
     
-    setTimeout(function() {
-        for (let i = 0; i < boxesRemover.length; i++) {
-            boxesRemover[i].parentNode.removeChild(boxesRemover[i]);
-        }
-    }, 2000);
+    for (let i = 0; i < boxesRemover.length; i++) {
+        boxesRemover[i].parentNode.removeChild(boxesRemover[i]);
+    }
 }
 
 
@@ -244,5 +264,27 @@ function jogadaPC() {
 
     let cloneO = o.cloneNode(true);
 
-    contador
+    let contador = 0;
+    let preenchido = 0;
+
+    for (let i = 0; i < boxes.length; i++) {
+        
+        let numAleatorio = Math.floor(Math.random() * 5);
+
+        //só preenche se se estiver vazio
+        if (boxes[i].childNodes[0] == undefined) {
+            if (numAleatorio <= 1) {
+                boxes[i].appendChild(cloneO);
+                contador ++;
+                break;
+            }
+        //  Chega quantos boxes estão preenchidos
+        } else {
+            preenchido++;
+        }
+    }
+
+    if (contador == 0 && preenchido < 9) {
+        jogadaPC();
+    }
 }
