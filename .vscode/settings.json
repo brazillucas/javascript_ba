@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "\\\\wsl.localhost\\Ubuntu\\home\\android\\devfolder\\JavaScript\\jsba\\20_PROJETO_COM_NODE\\db\\app.db",
+            "name": "EncontraEmpregoDB"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

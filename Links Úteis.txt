@@ -1,0 +1,2 @@
+Algumas mudanças do Bootstrap v5 em relação a v4
+https://stackoverflow.com/questions/63948287/bootstrap-5-navbar-align-items-right
