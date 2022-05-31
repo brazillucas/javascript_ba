@@ -5,48 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encontra Emprego</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Procura Trampo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">            
+            <a class="navbar-brand" href="index.html">
+                <img src="./public/img/ProcuraTrampoNomeGrande.png" alt="Logo da Procura Trampo" id="logo" class="d-inline-block align-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Ver Vagas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-primary" href="add.html">Abrir Vaga</a>
-                    </li>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Ver Vagas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary" href="add.html">Abrir Vaga</a>
+                </li>
                 </ul>
-                </div>
             </div>
         </nav>
     </header>
 
 
-    <div class="container-fluid" id="top-container">
-        <h1 id="main-title" class="text-center">Encontre o Emprego Dos Seus Sonhos</h1>
-        <p id="main-subtitle" class="text-center">Somos o site com mais vagas de tecnologia do mercado, direcionados ao home Office</p>
-        <div class="row g-3">
-            <form action="" id="search-form" class="form-inline">
-                <div class="form-group col-md-10">
-                    <input type="text" name="job" placeholder="Digite a vaga que está buscando" id="job" class="form-control">
-                </div>
-            </form>
-        </div>
-        <div class="col-md-2">
-            <button type="submit" class="btn btn-primary">Procurar</button>
-        </div>
+    <div id="top-container" class="container-fluid">
+        <h1 id="main-title" class="text-center">Encontre o emprego dos seus sonhos</h1>
+        <p id="main-subtitle" class="text-center">Somos o site com mais vagas de tecnologia no mercado, direcionadas a home office</p>
+        <form id="search-form" class="form-inline" action="">
+            <div class="form-group col-md-10">
+                <input type="text" class="form-control" id="job" name="job" placeholder="Digite a vaga que está buscando">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary">Procurar</button>
+            </div>
+        </form>
     </div>
 
+    <main>
+        <div id="job-container" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="job-list-title">Veja nossas vagas em destaque</h2>
+                    <ul id="job-list" class="list-group">
+
+                        <li class="list-group-item new-job">
+                            <img src="./public/img/company.svg" alt="Companhia">
+                            <p>Empresa</p>
+                            <h2>Título da Vaga</h2>
+                            <p>R$12.000,00</p>
+                            <span class="new-job-label">Nova</span>
+                            <a href="http://" class="btn btn-primary">Ver Vaga</a>
+                        </li>
+
+                        <li class="list-group-item new-job">
+                            <img src="./public/img/company.svg" alt="Companhia">
+                            <p>Empresa</p>
+                            <h2>Título da Vaga</h2>
+                            <p>R$12.000,00</p>
+                            <span class="new-job-label">Nova</span>
+                            <a href="http://" class="btn btn-primary">Ver Vaga</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <img src="./public/img/company.svg" alt="Companhia">
+                            <p>Empresa</p>
+                            <h2>Título da Vaga</h2>
+                            <p>R$12.000,00</p>
+                            <span class="new-job-label">Nova</span>
+                            <a href="http://" class="btn btn-primary">Ver Vaga</a>
+                        </li>
+
+                        <li class="list-group-item ">
+                            <img src="./public/img/company.svg" alt="Companhia">
+                            <p>Empresa</p>
+                            <h2>Título da Vaga</h2>
+                            <p>R$12.000,00</p>
+                            <span class="new-job-label">Nova</span>
+                            <a href="http://" class="btn btn-primary">Ver Vaga</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
     <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 </html>
