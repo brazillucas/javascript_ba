@@ -1,0 +1,6 @@
+id;titulo;descricao;salario;companhia;email;novo;createdAt;updatedAt
+1;Dev Jr. Django;Desenvolvedor web utilizando Django;1200;BL Web;contrato@blweb.com;1;2022-05-30 17:31:00.513 +00:00;2022-05-30 17:31:00.513 +00:00
+2;Dev Vue.js;Desenvolver o front-end com o framework Vue.js;2300;BL Web;contrato@blweb.com;0;2022-06-01 15:13:58.368 +00:00;2022-06-01 15:13:58.368 +00:00
+3;Dev Angular.js;"Desenvolvedor em Angular.js
+";2500;ZNFT;contato@znft.com.br;;;
+4;Dev C# Pleno;Desenvolver programas para o SO Windows;10000;Microsoft;contato@ms.com;1;2022-06-01 17:04:27.497 +00:00;2022-06-01 17:04:27.497 +00:00
