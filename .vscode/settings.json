@@ -7,5 +7,6 @@
             "name": "EncontraEmpregoDB"
         }
     ],
-    "sqltools.useNodeRuntime": true
+    "sqltools.useNodeRuntime": true,
+    "livePreview.defaultPreviewPath": "/home/aluno/javascript/21_PROJETO_QUIZZ/index.html"
 }
